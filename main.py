@@ -110,3 +110,19 @@ for p in patient_data:
 # Forecast ROI with a 15% clinical failure risk
 risk_roi = calculate_risk_adjusted_roi(total_patients=100, net_price=78000, expected_success_rate=0.85, cogs=25000)
 print(f"Risk-Adjusted 3-Year ROI: {risk_roi:.2%}")
+
+from src.sensitivity_analysis import run_success_sensitivity
+
+# Execute Sensitivity Analysis
+sensitivity_df = run_success_sensitivity(
+    total_patients=100, 
+    net_price=78000, 
+    cogs=25000
+)
+
+print("\n--- CLINICAL SUCCESS SENSITIVITY ANALYSIS ---")
+print(sensitivity_df[['Success_Rate', 'ROI_Percent']])
+
+# Identify the 'Break-Even' point if applicable
+break_even = sensitivity_df[sensitivity_df['ROI_Percent'] > 0].iloc[0]
+print(f"\nMinimum Success Rate for Profitability: {break_even['Success_Rate']*100}%")

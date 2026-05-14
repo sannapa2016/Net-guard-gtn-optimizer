@@ -8,8 +8,10 @@ The **Inflation Reduction Act** has introduced significant pricing pressures on 
 * **Protecting Net Price:** By utilizing the **GTN Waterfall Engine**, the project allows for real-time monitoring of margin retention. It identifies exactly where Gross-to-Net erosion is occurring, allowing teams to defend the "Floor Net Price" during federal price ceiling discussions.
 * **Mitigating Inflation Rebates:** The **IRA Scenario Model** simulates price-increase impacts against CPI-U rates, ensuring that commercial pricing strategies do not inadvertently trigger statutory penalties that wipe out year-over-year gains.
 * **Leakage Prevention:** Every dollar lost to **340B Duplicate Discounts** is a dollar that cannot be recovered under IRA-negotiated prices. Our **Scrubbing Engine** automates the identification of these duplicates to ensure the integrity of every unit sold.
+  
 
 *<img width="629" height="456" alt="GTN-Waterfall" src="https://github.com/user-attachments/assets/77fd1191-1778-4034-a348-a0b2b5cf0811" />
+
 
 ### Enabling Value-Based Contracting (VBC)
 

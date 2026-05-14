@@ -9,6 +9,8 @@ The **Inflation Reduction Act** has introduced significant pricing pressures on 
 * **Mitigating Inflation Rebates:** The **IRA Scenario Model** simulates price-increase impacts against CPI-U rates, ensuring that commercial pricing strategies do not inadvertently trigger statutory penalties that wipe out year-over-year gains.
 * **Leakage Prevention:** Every dollar lost to **340B Duplicate Discounts** is a dollar that cannot be recovered under IRA-negotiated prices. Our **Scrubbing Engine** automates the identification of these duplicates to ensure the integrity of every unit sold.
 
+* ![GTN Revenue Erosion Waterfall](./docs/GTN-Waterfall.png)
+
 ### Enabling Value-Based Contracting (VBC)
 
 As Cell & Gene therapies carry high upfront costs, Payers are increasingly demanding **Value-Based Contracts**—where payment is tied to patient outcomes over time. This project provides the data infrastructure required to support VBC:

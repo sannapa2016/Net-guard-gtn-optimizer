@@ -90,3 +90,23 @@ col3.metric("Projected 3-Year ROI", "340%")
 st.subheader("Payer Negotiation Simulator")
 rebate_input = st.slider("Proposed Rebate Increase (%)", 0, 10, 5)
 # (Call your Negotiation logic here to update the ROI live)
+
+from src.obr_engine import process_outcome_rebate
+from src.roi_model import calculate_risk_adjusted_roi
+
+# Mock Case: A Gene Therapy with a Year 2 'Walking Test' milestone
+# Benchmark: 300 meters
+patient_data = [
+    {"id": "PT_101", "score": 350}, # Success
+    {"id": "PT_102", "score": 150}  # Failure -> Triggers Refund
+]
+
+WAC = 150000
+
+for p in patient_data:
+    outcome = process_outcome_rebate(p['id'], p['score'], 300, WAC)
+    print(f"Patient {p['id']} Result: {outcome['status']} | Refund: ${outcome['refund_amount']:,.2f}")
+
+# Forecast ROI with a 15% clinical failure risk
+risk_roi = calculate_risk_adjusted_roi(total_patients=100, net_price=78000, expected_success_rate=0.85, cogs=25000)
+print(f"Risk-Adjusted 3-Year ROI: {risk_roi:.2%}")
